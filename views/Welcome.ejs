@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome User</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .welcome-message {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .welcome-heading {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .welcome-username {
+      font-size: 24px;
+      color: #666;
+    }
+
+    .welcome-text {
+      font-size: 18px;
+      color: #555;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="welcome-message">
+      <h1 class="welcome-heading">Welcome!</h1>
+      <h2 class="welcome-username"><%= name %></h2>
+    </div>
+    <p class="welcome-text">Thank you for joining our platform. We're excited to have you on board!</p>
+    <p class="welcome-text">Feel free to explore and make the most of our services.</p>
+    <!-- <a href="#" class="button">Get Started</a> -->
+  </div>
+</body>
+</html>

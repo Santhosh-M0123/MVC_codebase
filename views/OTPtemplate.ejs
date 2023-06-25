@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>OTP Generation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .otp-message {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .otp-heading {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .otp-code {
+      font-size: 24px;
+      color: #666;
+    }
+
+    .otp-text {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      color: white;
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="otp-message">
+      <h1 class="otp-heading">OTP Generation</h1>
+      <h2 class="otp-code"><%= otpCode %></h2>
+    </div>
+    <p class="otp-text">Use the following One-Time Password (OTP) to verify your account:</p>
+    <p class="otp-text">Please do not share this OTP with anyone.</p>
+    <!-- <a href='#' class="button">Verify Account</a> -->
+  </div>
+</body>
+</html>
