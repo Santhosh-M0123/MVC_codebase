@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form
+      action="/api/upload/multiple"
+      enctype="multipart/form-data"
+      method="post"
+    >
+      <input type="file" name="files" multiple />
+      <button type="submit">Submit</button>
+    </form>
+    <h1>Multiple fetch</h1>
+    <input type="file" name="files" id="multiplefiles" multiple/>
+    <button onclick="uploadMultiple()">click</button>
+    <input type="file" name="demofile" id="idfile" multiple />
+    <button onclick="uploadSingle()">Submit File</button>
+
+    <script>
+        let form = new FormData();
+      let uploadSingle = async () => {
+        let filesInput = document.getElementById("idfile");
+        const file = filesInput.files[0];
+        form.append("file", file);
+        console.log(form);
+
+        fetch("/api/upload/single", {
+          method: "POST",
+          body: form,
+        })
+          .then((res) => res.json())
+          .then((d) => console.log(d));
+      };
+
+      let uploadMultiple = async () => {
+        let filesInput = document.getElementById("multiplefiles");
+        const files = filesInput.files;
+        
+        for(let i=0;i < files.length ; i++){
+            form.append('files' , files[i])
+        }
+        console.log(form)
+        fetch("/api/upload/multiple" , {
+            method : "POST",
+            body : form
+        })
+    }
+    </script>
+  </body>
+</html>

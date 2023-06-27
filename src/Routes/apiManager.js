@@ -1,4 +1,5 @@
 const apiFilter = require("../Helpers/apiFilter");
+const upload = require("../Helpers/fileHandler");
 
 //Manager manages all the route and map for the specific controller
 let Manager = (req,res) => {

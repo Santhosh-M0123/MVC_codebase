@@ -1,30 +1,17 @@
 const routes = require("../Controller/index");
 
-module.exports = [{
-    path : "/login",
-    controller : routes.LoginUser_,
+module.exports = [
+{
+    path : "/upload/single",
+    controller : routes.singleFileUpload_
 },
 {
-    path : '/register',
-    controller : routes.RegisterUser_
-},
-{
-    path : "/upload",
-    controller : routes.FileUpload_
-},{
+    path : '/upload/multiple',
+    controller : routes.multipleFileUpload_
+}
+,{
     path : '/logout',
     controller : routes.LogoutUser_
-},{
-    path : '/forgetpassword',
-    controller : routes.ForgetPassword_
-},
-{
-    path : '/confirmotp',
-    controller : routes.ConfirmOTP_
-},
-{
-    path : '/createnewpassword',
-    controller : routes.CreateNewPassword_
 },
 {
     path : '/changepassword',
@@ -32,7 +19,8 @@ module.exports = [{
 },{
     path : '/deleteaccount',
     controller : routes.DeleteProfile_
-},{
-    path : '/restore',
-    controller : routes.RestoreAccount_
+},
+{
+    path : '/getdata',
+    controller : routes.GetData
 }]
